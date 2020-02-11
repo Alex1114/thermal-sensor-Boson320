@@ -54,3 +54,13 @@ rm cmake_install.cmake
 rm Makefile
 ```
 -----------------------------
+
+## Demo
+```
+BosonUSB_y -> 8bit (640*512)
+```
+![BosonUSB_y](figures/BosonUSB_y.png)
+```
+BosonUSB_r -> 16bit (320*256)
+```
+![BosonUSB_r](figures/BosonUSB_r.png)
