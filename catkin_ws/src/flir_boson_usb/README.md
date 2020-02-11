@@ -1,5 +1,9 @@
 # flir_boson_usb 
 ROS plugin for FLIR Boson Thermal camera
+## RUN
+```
+roslaunch flir_boson_usb flir_boson.launch
+```
 ## Parameters
 ~frame_id
 The tf frame to be used on all published images.
