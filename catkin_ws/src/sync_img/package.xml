@@ -1,0 +1,17 @@
+<package format="2">
+  <name>sync_img</name>
+  <version>0.0.1</version>
+  <description>
+    Approximate time sync img.
+  </description>
+  <author>Alex1114</author>
+  <maintainer email="alex@gmail.com">Alex1114</maintainer>
+  <license>BSD</license>
+  <url></url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>message_filters</depend>
+  <depend>roscpp</depend>
+  <depend>sensor_msgs</depend>
+</package>
