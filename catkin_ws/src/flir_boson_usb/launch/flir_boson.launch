@@ -4,7 +4,7 @@
   <arg name="frame_id" default="boson_camera"/>
 
   <!-- the linux file descriptor location for the camera -->
-  <arg name="dev" default="/dev/video8"/>
+  <arg name="dev" default="/dev/video2"/>
 
   <!-- valid values are 30.0 or 60.0 for Bosons -->
   <arg name="frame_rate" default="30.0"/>

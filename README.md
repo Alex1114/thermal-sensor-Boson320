@@ -27,6 +27,11 @@ BosonUSB_r -> 16bit (320*256)
 ## cali_thermal
 
 ## flir_boson_usb
+ROS plugin for FLIR Boson Thermal camera.
+### Demo
+
+
+
 
 ## sync_img
 

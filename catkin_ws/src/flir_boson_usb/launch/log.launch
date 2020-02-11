@@ -1,5 +1,0 @@
-<?xml version="1.0" ?>
-<launch>
-  <node pkg="rosbag" type="record" name="rosbag_record_all"
-       args="record -o ~/bag/ /camera/aligned_depth_to_color/image_raw /camera/aligned_depth_to_color/camera_info /camera/color/camera_info /camera/color/image_raw /ti_mmwave/radar_scan_pcl_0 --duration=5"/>
-</launch>
