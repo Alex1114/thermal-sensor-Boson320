@@ -1,4 +1,4 @@
-# Boson_USB - 
+# Boson_USB 
 -----------------------------
 ## Description:
 
