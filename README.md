@@ -29,6 +29,11 @@ BosonUSB_r -> 16bit (320*256)
 ## flir_boson_usb
 ROS plugin for FLIR Boson Thermal camera.
 ### Demo
+Thermal video in rviz  
+![Boson_ROS](../figures/Boson_ROS.png)  
+
+Rostopic list  
+![rostopic](../figures/rostopic.png) 
 
 
 
