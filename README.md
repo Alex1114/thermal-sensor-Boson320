@@ -15,8 +15,8 @@ Video is 8 bits is directly paintable, linear transformation happens inside the
 To Display Boson data we are using OpenCV to convert from YUV to RGB.
 
 ### Demo
-![BosonUSB y](figures/BosonUSB y.png)
-![BosonUSB r](figures/BosonUSB r.png)
+![BosonUSB_y](figures/BosonUSB_y.png)
+![BosonUSB_r](figures/BosonUSB_r.png)
 
 ## cali_thermal
 
