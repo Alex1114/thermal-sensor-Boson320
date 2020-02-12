@@ -47,7 +47,11 @@ BosonUSB_r -> 16bit (320*256)
 ![BosonUSB_r](figures/BosonUSB_r.png)
 
 ## cali_thermal
+To register each pixel from the Thermal camera to the frame of the RGB camera,
 
+### Demo
+Result
+![cali](figures/result.jpg) 
 
 ## flir_boson_usb
 ROS plugin for FLIR Boson Thermal camera and align to RGB.
@@ -63,7 +67,10 @@ Thermal video in rviz
 ![Boson_ROS](figures/Boson_ROS.png)  
 
 Rostopic list  
-![rostopic](figures/rostopic.png) 
+![rostopic](figures/rostopic.png)  
+
+Align thermal to RGB
+![Align](figures/align.png)  
 
 ## sync_img
 For someone need to record rosbag or collect data with thermal images and other sensor(RGBD images).  
