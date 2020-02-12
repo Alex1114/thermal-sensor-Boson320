@@ -4,7 +4,7 @@ This repo can synchronize the thermal and other sensor by the close timestam.
 
 ## RUN
 ```
-rosrun sync_img sync_img
+$ rosrun sync_img sync_img
 ```
 
 ## topic

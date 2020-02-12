@@ -4,6 +4,16 @@
 3. ROS/tf
 
 ## STRUCTURE ORGANIZATION
+- data_ros: Use rosservice to save rgb, depth, thermal images.
+```
+$ python2 data_collection.py 
+``` 
+Open new terminal  
+```
+$ rosservice call /save_image
+```
+Then you will get three images and two camera info.
+
 - libcbdetect: C++ implmentation for chessboard detection from [this repo](https://github.com/ftdlyc/libcbdetect)
 - align_thermal_to_rgb: align thermal image to RGB image (in this case, Intel RealSense D435) with the help of chessboard
   - include
@@ -27,9 +37,8 @@
  
 ## BUILD
 Since the `align_thermal_to_rgb` should do chessboard detection, so we have to build the `libcbdetect` first  
-  1. cd && git clone https://github.com/sean85914/cali_thermal.git  
-  2. cd cali_thermal/libcbdetect  
-  3. mkdir devel && cd devel && cmake ../ && make  
+  1. cd cali_thermal/libcbdetect  
+  2. mkdir devel && cd devel && cmake ../ && make  
   **(Note: If you want to show more detail information, use cmake ../ -DCMAKE_BUILD_TYPE=Debug then make)**
 then we can build the `align_thermal_to_rgb`  
   4. cd ~/cali_thermal/align_thermal_to_rgb  
@@ -41,7 +50,7 @@ then we can build the `align_thermal_to_rgb`
   `./example [path_to_output_txt] [path_to_rgb_intrinsic] [path_to_rgb_image] [path_to_depth_image] [path_to_thermal_image]`
 
 ## RESULT
-![image](https://github.com/sean85914/align_thermal_to_rgb/blob/master/align_thermal_to_rgb/result/result.jpg)
+![cali](../../figures/result.jpg) 
 Sample output:  
 ``
 intrinsic: [606.526, 625.874, 283.076, 247.947]

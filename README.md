@@ -47,7 +47,7 @@ BosonUSB_r -> 16bit (320*256)
 ![BosonUSB_r](figures/BosonUSB_r.png)
 
 ## cali_thermal
-To register each pixel from the Thermal camera to the frame of the RGB camera,
+To register each pixel from the Thermal camera to the frame of the RGB camera.
 
 ### Demo
 Result
@@ -77,5 +77,5 @@ For someone need to record rosbag or collect data with thermal images and other 
 This repo can synchronize the thermal and other sensor by the close timestam.
 
 ```
-rosrun sync_img sync_img
+$ rosrun sync_img sync_img
 ```
