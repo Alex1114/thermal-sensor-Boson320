@@ -48,10 +48,15 @@ BosonUSB_r -> 16bit (320*256)
 
 ## cali_thermal
 
+
 ## flir_boson_usb
-ROS plugin for FLIR Boson Thermal camera.
+ROS plugin for FLIR Boson Thermal camera and align to RGB.
 ```
 $ roslaunch flir_boson_usb flir_boson.launch
+```
+After launch the RGB sensor, align thermal to RGB.
+```
+$ roslaunch flir_boson_usb align_thermal.launch
 ```
 ### Demo
 Thermal video in rviz  

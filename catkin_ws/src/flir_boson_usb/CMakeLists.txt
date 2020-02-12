@@ -12,9 +12,12 @@ find_package(catkin REQUIRED
   sensor_msgs
   camera_info_manager
   roslint
+  roslib
 )
 
 find_package(OpenCV REQUIRED)
+find_package(tf REQUIRED)
+find_package(Eigen3 REQUIRED)
 
 catkin_package(
   CATKIN_DEPENDS
@@ -29,7 +32,21 @@ include_directories(
   include
   ${OpenCV_INCLUDE_DIRS}
   ${catkin_INCLUDE_DIRS}
+  ${tf_INCLUDE_DIRS}
+  ${EIGEN3_INCLUDE_DIR}
 )
+
+message(STATUS ${tf_INCLUDE_DIRS})
+
+get_property(dirs DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY INCLUDE_DIRECTORIES)
+foreach(dir ${dirs})
+  message(STATUS "dir='${dir}'")
+endforeach()
+
+if(CMAKE_BUILD_TYPE STREQUAL Debug)
+  ADD_DEFINITIONS(-DDEBUG)
+ENDIF()
+
 
 add_executable(${PROJECT_NAME}_node
   src/flir_boson_usb_node.cpp
@@ -80,3 +97,11 @@ install(FILES nodelet_plugins.xml
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
+
+add_library(align_thermal_to_rgb src/align_thermal_to_rgb.cpp)
+target_link_libraries(align_thermal_to_rgb ${OpenCV_LIBRARIES} ${tf_LIBRARIES})
+
+add_executable(ros_align_thermal src/ros_align_thermal.cpp)  
+target_link_libraries(ros_align_thermal ${catkin_LIBRARIES} ${OpenCV_LIBRARIES} ${libcbdetection_lib} ${tf_LIBRARIES} align_thermal_to_rgb) 
+
+

@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="flir_boson_usb" type="ros_align_thermal" name="ros_align_thermal" output="screen">
+  </node>
+</launch>

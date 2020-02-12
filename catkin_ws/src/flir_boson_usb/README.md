@@ -1,8 +1,13 @@
 # flir_boson_usb 
-ROS plugin for FLIR Boson Thermal camera
+ROS plugin for FLIR Boson Thermal camera and align to RGB.
 ## RUN
 ```
 roslaunch flir_boson_usb flir_boson.launch
+```
+After launch the RGB sensor, align thermal to RGB.  
+(You have to do cali_thermal first, and put **camera_model.txt** **rgb_intrinsic_file.txt** in example_calibrations file)
+```
+$ roslaunch flir_boson_usb align_thermal.launch
 ```
 ## Parameters
 ~frame_id
@@ -36,3 +41,7 @@ Thermal video in rviz
 
 Rostopic list  
 ![rostopic](../../../figures/rostopic.png)  
+
+Align thermal to RGB
+![Align](../../../figures/align.png)  
+
