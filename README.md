@@ -21,7 +21,7 @@ Note:
 Do the following everytime as you open new terminals
 
 ```
-$ cd ~/thermal_sensor
+$ cd ~/thermal-sensor-Boson320
 $ source environment.sh
 ```
 
