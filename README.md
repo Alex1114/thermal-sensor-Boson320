@@ -13,7 +13,7 @@ Camera:Boson320
 ```
 $ cd
 $ git clone https://github.com/Alex1114/thermal_sensor
-$ cd ~/thermal_sensor/catkin_ws
+$ cd ~/thermal-sensor-Boson320/catkin_ws
 $ source /opt/ros/melodic/setup.bash
 $ catkin_make
 ```
